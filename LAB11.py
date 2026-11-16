@@ -119,7 +119,7 @@ with izquierda:
                  color_discrete_map={"Papelería": "#E8A0BF",
                                                  "Cuidado Personal": "#E8A0BF",
                                                  "Deporte": "#81B29A",
-                                                 "Hogar": "E07A5F",
+                                                 "Hogar": "#E07A5F",
                                                  "Tecnología": "#6EC1E4"})
     fig.update_layout(xaxis_title="Ingreso", yaxis_title="Preferencia declarada", showlegend=False)
     st.plotly_chart(fig, width="stretch")
