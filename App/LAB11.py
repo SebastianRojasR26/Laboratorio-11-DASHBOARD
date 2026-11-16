@@ -120,12 +120,7 @@ st.header("Laboratorio 11")
 
 st.subheader("1. ¿Por qué la tasa de recompra sola no basta?")
 st.markdown("""
-- **Tasa de recompra** = clientes con 2 o más pedidos / compradores (clientes con 1 o más pedidos).
-- **Clientes con exactamente una compra**: mide cuántas personas podrían recibir la campaña,
-  es decir, el tamaño de la población objetivo.
-- La tasa es un porcentaje y no dice sobre cuántas personas se calcula. Un canal puede tener la tasa
-  más baja pero pocos clientes (el piloto tendría poco impacto), o una tasa calculada con muy pocos
-  compradores (poco confiable). Por eso hay que mirar la tasa **y** el número de clientes con una compra.
+- xxx
 """)
 
 df_compradores = df_compradores.copy()
@@ -155,9 +150,7 @@ else:
         fig.update_layout(xaxis_title="% de compradores con 2+ pedidos", yaxis_title="Canal", showlegend=False)
         st.plotly_chart(fig, width="stretch")
         st.markdown("""
-**Justificación:** se usa un gráfico de barras porque compara un solo valor (un porcentaje) entre
-pocas categorías (los canales), y las barras que parten de cero permiten comparar fácilmente.
-La etiqueta muestra la tasa y, al pasar el mouse, se ve cuántos compradores componen cada tasa.
+**Justificación:** sxxxx
 """)
 
     # Punto 4
@@ -174,29 +167,17 @@ La etiqueta muestra la tasa y, al pasar el mouse, se ve cuántos compradores com
         st.plotly_chart(fig, width="stretch")
         st.markdown("""
 **¿El canal con mayor volumen coincide necesariamente con el de menor tasa de recompra?**
-No necesariamente. El número de clientes con una compra depende de la tasa **y** del tamaño del canal.
-Con todos los datos sí coinciden (Redes sociales: 147 clientes con una compra y la tasa más baja, 59,6%),
-pero al filtrar por Medellín no: Redes sociales tiene más clientes de una compra (29),
-mientras que la tasa más baja es la de Búsqueda (60,0%).
+xxxx
 """)
 
 # Punto 5
 st.subheader("5. Comprobación de los filtros")
 st.markdown("""
-Todas las métricas y gráficos se calculan sobre `df_final`, así que cambian juntos con los filtros.
-- **Sin filtros:** 352 clientes con 1 compra (33,91%).
-- **Ciudad = Bogotá:** 169 clientes con 1 compra (32,94%).
-- **Ciudad = Medellín:** 81 clientes con 1 compra (35,68%).
-- **Segmento = Sin Compra:** 0 compradores; se muestra un aviso y las tasas aparecen como N/A.
+xxxx
 """)
 
 # Punto 6
 st.subheader("6. Recomendación")
 st.markdown("""
-Recomendamos iniciar el piloto en **Redes sociales**. Es el canal con más clientes con un solo pedido
-(**147**) y con la menor tasa de recompra (**59,6%** de 364 compradores), así que tiene la mayor población
-objetivo y el mayor espacio de mejora. **Limitación:** los clientes que se registraron hace poco han tenido
-menos tiempo para volver a comprar, y no conocemos por qué no regresan los demás.
-**Métrica del piloto:** tasa de segunda compra a 60 días en los clientes que reciben la campaña,
-comparada con un grupo de control aleatorio que no la recibe.
+xxx
 """)
