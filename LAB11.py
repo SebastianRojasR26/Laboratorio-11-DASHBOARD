@@ -103,7 +103,12 @@ derecha, izquierda = st.columns(2)
 with derecha:
     df_plot = (df_final.groupby("segmento", as_index=False)
                .agg(n_clientes=("id_cliente", "count")))
-    fig = px.bar(data_frame=df_plot, x="segmento", y="n_clientes", color="segmento", text="n_clientes")
+    fig = px.bar(data_frame=df_plot, x="segmento", y="n_clientes", color="segmento", 
+                 color_discrete_map={"En Desarrollo": "#57c9c3",
+                                             "En Pausa": "#07709A",
+                                             "Fiel": "#1E8D0F",
+                                             "Primerizo": "#176226",
+                                             "Sin Compra": "#371762"}, text="n_clientes")
     fig.update_layout(xaxis_title="Segmento", yaxis_title="Número de Clientes", showlegend=False)
     st.plotly_chart(fig, width="stretch")
 
