@@ -115,7 +115,12 @@ with derecha:
 with izquierda:
     df_plot = (df_final.groupby("preferencia_declarada", as_index=False)
                .agg(ingreso=("ingreso_total", "sum")).sort_values(by="ingreso", ascending=False))
-    fig = px.bar(data_frame=df_plot, x="ingreso", y="preferencia_declarada", orientation="h")
+    fig = px.bar(data_frame=df_plot, x="ingreso", y="preferencia_declarada", orientation="h", 
+                 color_discrete_map={"Papelería": "#57c9c3",
+                                                 "Cuidado Personal": "#07709A",
+                                                 "Deporte": "#1E8D0F",
+                                                 "Hogar": "#176226",
+                                                 "Tecnología": "#371762"})
     fig.update_layout(xaxis_title="Ingreso", yaxis_title="Preferencia declarada", showlegend=False)
     st.plotly_chart(fig, width="stretch")
 
