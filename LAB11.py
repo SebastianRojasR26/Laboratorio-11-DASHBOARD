@@ -130,7 +130,12 @@ st.header("Laboratorio 11")
 
 st.subheader("1. ¿Por qué la tasa de recompra sola no basta?")
 st.markdown("""
-- xxx
+            La tasa de recompra la medimos como el porcentaje de compradores que hicieron dos o más pedidos,
+            dividiendo entre quienes ya compraron al menos una vez. Por otra parte, el número de clientes con exactamente 
+            una compra nos dice cuántas personas podrían recibir la campaña, pues mirar solo la tasa puede engañarnos,
+            ya que un canal puede tener la tasa más baja, pero si tiene pocos clientes, el piloto movería muy poco. 
+            Además, una tasa calculada con pocas personas puede cambiar mucho con unos pocos casos, por esta razon necesitamos ver las dos cosas juntas,
+            dónde hay espacio para mejorar y a cuántas personas podemos llegar.
 """)
 
 df_compradores = df_compradores.copy()
